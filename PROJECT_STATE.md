@@ -1,9 +1,9 @@
 # Xu AI Roadmap — PROJECT_STATE
 
-**Updated:** 2026-10-25  
+**Updated:** 2026-10-27  
 **Roadmap:** v1.0  
 **Phase:** Week 0 — Environment Setup  
-**Status:** Week 0 核心环境验收完成（PyTorch + CUDA + Autograd）；待保存实验代码与建立 GitHub 仓库
+**Status:** Week 0 核心环境验收完成；GitHub 仓库和 ChatGPT 连接已配置，待保存实验代码
 
 ## 1. 当前目标
 
@@ -28,7 +28,8 @@
 - [x] 完成第一个 Tensor + Autograd 实验（GPU 上计算 `y=x²+2x+1`，`x=3`，`y=16`，梯度 `8`）
 - [ ] 将实验保存为可复现 Python 脚本
 - [ ] 确认 NumPy 安装状态（曾收到缺少 NumPy 的警告）
-- [ ] 建立 GitHub 仓库
+- [x] 建立 GitHub 仓库：`EudtyH/xu-ai-lab`，上传 `PROJECT_STATE.md`
+- [x] ChatGPT GitHub 连接：已验证仓库读取及写入权限
 
 ## 3. 当前项目
 
@@ -74,6 +75,8 @@
 
 **2026-10-24 晚至 2026-10-25 凌晨：** 恢复 WSL Ubuntu-24.04 与 `.venv`；通过 `nvidia-smi` 验证 GPU；安装 `torch-2.14.1+cu130`，验证 `torch.cuda.is_available()` 返回 `True`；在 `cuda:0` 运行最小 Tensor + Autograd 实验，输出 `y=16.0`、`dy/dx=8.0`。曾出现 NumPy 未安装警告；对话中未确认后续安装是否完成。
 
+**2026-10-27：** 建立 GitHub 仓库 `EudtyH/xu-ai-lab`，上传进度文件；ChatGPT 已通过连接成功读取文件并取得仓库写入权限。下一步保存首个可复现 Python 实验脚本。
+
 ## 8. 下一步（唯一主线任务）
 
 **把今天已验证的 GPU Tensor + Autograd 实验保存为项目内的可复现 Python 脚本，并运行验证。**
@@ -91,10 +94,10 @@ cd ~/projects/xu-ai-lab
 source .venv/bin/activate
 ```
 
-之后再建立 GitHub 仓库；NumPy 状态和 RAM/磁盘容量可以顺手检查，但不阻塞主线。
+GitHub 仓库已建立；NumPy 状态和 RAM/磁盘容量可以顺手检查，但不阻塞主线。
 
 ## 9. 下次恢复入口
 
 优先阅读第 8 节，直接执行下一项任务。中断后不补课、不惩罚、不重复初始化。
 
-> 维护说明：本文件为可替换版本。ChatGPT 生成新版本不代表 Project Source 已自动更新；替换后需重新核验。
+> 维护说明：GitHub `main` 分支的本文件是后续唯一进度来源。ChatGPT 应先读取仓库最新内容；仅在实际提交成功后声称状态已保存。ChatGPT Project 中旧附件可能不会自动同步，不再作为进度准绳。
